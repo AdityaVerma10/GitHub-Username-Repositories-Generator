@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub UserName and Repositories Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+<div id="loader"  class="loader-none"></div>
+<div id="content">
+    <div class="topcontainer searchbox">
+
+        <i class="fa-brands fa-github fa-6x"></i>
+
+                <h1>GitHub Username <br> and Repositories Generator</h1>
+    
+        <form autocomplete="off" id="Usernameform">
+            <input type="text" name="unsername" class="unsername" placeholder="Enter GitHub UserName">
+    
+            <button type="button" id="search-btn">Search</button>
+        </form>
+        </div>
+        <main class="main">
+    <div id="user-profile-container">
+        <div class="img-box">
+            <img src="#" alt="" id="userimg">
+        </div>
+        
+        <div class="profile-detail">
+            <h2 id="nameofuser"> </h2>
+           <p class="Bio"> </p>
+             <p id="location"> </p>
+             <p id="userUrl"><a href="#" id="userUrl-ancer"></a></p>
+        </div>
+    </div>
+    <h1 style="text-align: center;">Repositories</h1>
+    <div class="list-container" id="list-container">
+    
+    </div>
+    <div class="pagination" id="pagination-container">
+       
+     </div>
+     <div id="again-src-box">
+     <a href="index.html"><button id="again-search" >Reset !</button></a>
+    </div>
+    </main>
+</div>
+    <script src="script.js"></script>
+   
+</body>
+</html> 
+
+
+
