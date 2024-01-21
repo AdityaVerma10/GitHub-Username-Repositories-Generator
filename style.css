@@ -256,12 +256,12 @@ a{
     }
 }
 
-.again-sr {
+/* .again-sr {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .no-repo-para {
     font-size: 1.3rem;
