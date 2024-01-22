@@ -34,7 +34,7 @@ function getUsername() {
             if (!response.ok) {
                 if(response.status==403){
                 alert("API is Not Responding Currently Please Try Again After Some Time");
-                // window.location.href = "index.html";
+                window.location.href = "index.html";
                 }
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
