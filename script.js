@@ -38,10 +38,7 @@ function getUsername() {
                 alert("API is Not Responding Currently Please Try Again After Some Time");
                 window.location.href = "index.html";
                 }
-            else{
-                    alert("Please Check Your Username");
-                window.location.href = "index.html";
-                }
+       
             return response.json();
         })
         .then(data => {
