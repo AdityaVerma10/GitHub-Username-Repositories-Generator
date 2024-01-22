@@ -27,8 +27,6 @@ function getUsername() {
     let origianl = username.split(' ').join(''); // for removing spaces
     username = origianl;
     urlforUserdetail = `https://api.github.com/users/${origianl}`;
-    console.log(username)
-    console.log(urlforUserdetail)
 
 
     fetch(`https://api.github.com/users/${username}`)
@@ -36,7 +34,14 @@ function getUsername() {
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
-
+            if(response.status==403){
+                alert("API is Not Responding Currently Please Try Again After Some Time");
+                window.location.href = "index.html";
+                }
+            else{
+                    alert("Please Check Your Username");
+                window.location.href = "index.html";
+                }
             return response.json();
         })
         .then(data => {
@@ -146,14 +151,14 @@ let searchbtn = document.querySelector('#search-btn');
 
 searchbtn.addEventListener('click', getUsername);
 
-// for loader
+
 searchbtn.addEventListener("click", function () {
 
     document.getElementById("loader").classList.remove('loader-none')
     document.getElementById("loader").classList.add('loader');
     document.getElementById("content").classList.add('hidden')
     setTimeout(function () {
-        // Hide the loader
+     
         document.getElementById("loader").style.display = "none";
 
         // Show the content
@@ -165,7 +170,7 @@ searchbtn.addEventListener("click", function () {
 
 function additems(repocount) {
 
-    const itemsPerPage = 4; // Number of items per page
+    const itemsPerPage = 4; 
 
 
     function displayList(startIndex, endIndex) {
@@ -227,7 +232,6 @@ function additems(repocount) {
         }
     }
 
-    // Initial display
     const initialPage = 1;
     const startIndex = (initialPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
